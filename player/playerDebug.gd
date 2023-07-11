@@ -45,3 +45,14 @@ func _physics_process(delta):
 	if jumping and is_on_floor():
 		jumping = false
 	velocity = move_and_slide(velocity, Vector2(0, -1))
+
+
+func _on_Area2D_body_entered(body):
+	print_debug("muerto")
+	queue_free()
+	pass # Replace with function body.
+
+
+func _on_checpoint_body_entered(body):
+	print_debug("ganaste")
+	pass # Replace with function body.
