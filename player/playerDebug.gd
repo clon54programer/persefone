@@ -8,6 +8,7 @@ extends KinematicBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 
@@ -18,6 +19,14 @@ export (int) var gravity = 1200
 
 var velocity = Vector2()
 var jumping = false
+
+func get_position_vacio():
+	if position.y >= 480:
+		print_debug("esta en el vacio")
+		queue_free()
+		pass
+	
+	pass
 
 #esta funcion maneja los inout
 func get_input():
@@ -38,6 +47,7 @@ func get_input():
 		$Sprite/AnimationPlayer.play("Quito")
 
 func _physics_process(delta):
+	get_position_vacio()
 	get_input()
 	velocity.y += gravity * delta # esta linea hace que al sprite le afecte la gravedad
 	
