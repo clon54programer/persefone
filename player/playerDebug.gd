@@ -21,11 +21,17 @@ var velocity = Vector2()
 var jumping = false
 
 func get_position_vacio():
+	#calcula la posion en el eje y
 	if position.y >= 480:
 		print_debug("esta en el vacio")
 		queue_free()
 		pass
-	
+		#calcula la posion en el eje x
+	if position.x >= 1024:
+		print_debug("esta en el vacio")
+		queue_free()
+		pass
+						
 	pass
 
 #esta funcion maneja los inout
