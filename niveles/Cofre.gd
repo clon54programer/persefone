@@ -12,5 +12,5 @@ func _ready():
 func _on_Cofre_body_entered(body):
 	print_debug("ganastes")
 	$Sprite/AnimationPlayer.play("cofre")
-	#get_tree().change_scene()
+	get_tree().change_scene("res://niveles/ganastes.tscn")
 	pass # Replace with function body.
