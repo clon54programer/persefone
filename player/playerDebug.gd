@@ -65,12 +65,14 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	print_debug("muerto")
+	get_tree().change_scene("res://UI/main.tscn")
 	queue_free()
 	pass # Replace with function body.
 
 
 func _on_checpoint_body_entered(body):
 	print_debug("ganaste")
+	get_tree().change_scene("res://niveles/nivel1.tscn")
 	pass # Replace with function body.
 
 
@@ -79,6 +81,8 @@ func _on_checpoint_body_entered(body):
 
 func _Obstuculos_body_entered(body):
 	print_debug("perdiste")
+	queue_free()
+	get_tree().change_scene("res://niveles/nivel1.tscn")
 	pass # Replace with function body.
 
 

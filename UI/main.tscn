@@ -1,0 +1,205 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://UI/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Rocky Roads/Backgrounds/background.png" type="Texture" id=2]
+[ext_resource path="res://UI/Blue Button 2.png" type="Texture" id=3]
+[ext_resource path="res://UI/Blue-focus.png" type="Texture" id=4]
+[ext_resource path="res://UI/Blue Button 1.png" type="Texture" id=5]
+[ext_resource path="res://UI/main.gd" type="Script" id=6]
+[ext_resource path="res://assets/Rocky Roads/Deco/water_a_8frames.png" type="Texture" id=7]
+[ext_resource path="res://assets/Rocky Roads/UI/buttons.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=3]
+size = 55
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 31
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 27
+font_data = ExtResource( 1 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "buttons.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "buttons.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 16, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "buttons.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "buttons.png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 16, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "buttons.png 4"
+4/texture = ExtResource( 8 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 16, 16, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "buttons.png 5"
+5/texture = ExtResource( 8 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 32, 16, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[node name="Menu principal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 376.0
+margin_top = 48.0
+margin_right = -336.0
+margin_bottom = -232.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 120, 250 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 8.0
+margin_right = 288.0
+margin_bottom = 520.0
+texture = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 48.0
+margin_top = 104.0
+margin_right = 240.0
+margin_bottom = 384.0
+
+[node name="Nombre" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 192.0
+margin_bottom = 280.0
+alignment = 1
+
+[node name="titulo" type="Label" parent="MarginContainer/Nombre"]
+margin_left = 20.0
+margin_right = 212.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 3 )
+text = "Persefone"
+align = 1
+valign = 1
+
+[node name="Botones" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 192.0
+margin_bottom = 280.0
+alignment = 1
+
+[node name="iniciar" type="TextureButton" parent="MarginContainer/Botones"]
+margin_left = 60.0
+margin_top = 74.0
+margin_right = 252.0
+margin_bottom = 138.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="iniciar" type="Label" parent="MarginContainer/Botones/iniciar"]
+anchor_right = 0.064
+margin_top = 14.0
+margin_right = 63.712
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Iniciar"
+align = 1
+
+[node name="Salir" type="TextureButton" parent="MarginContainer/Botones"]
+margin_left = 60.0
+margin_top = 142.0
+margin_right = 252.0
+margin_bottom = 206.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="salir" type="Label" parent="MarginContainer/Botones/Salir"]
+margin_left = 10.0
+margin_top = 19.0
+margin_right = 50.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 2 )
+text = "Salir"
+align = 1
+
+[node name="WaterA8Frames" type="Sprite" parent="."]
+position = Vector2( 116, 204 )
+scale = Vector2( 3.84375, 35.75 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 524289, 0, 0, 524290, 0, 0, 524303, 0, 0, 524304, 0, 0, 589825, 0, 0, 589826, 0, 0, 589839, 0, 0, 589840, 0, 0, 786434, 3, 0, 786435, 4, 0, 786436, 4, 0, 786437, 4, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 851970, 3, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 917506, 3, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 1114115, 0, 0, 1114126, 0, 0, 1179652, 0, 0, 1179661, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0 )
+
+[connection signal="pressed" from="MarginContainer/Botones/iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="MarginContainer/Botones/Salir" to="." method="_on_Salir_pressed"]

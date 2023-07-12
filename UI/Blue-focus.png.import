@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/text_fx.png-7b69595f7bd4815874a386f1a55e9141.stex"
+path="res://.import/Blue-focus.png-f16de49ce1c182146a36a8ff7b20de44.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Rocky Roads/UI/text_fx.png"
-dest_files=[ "res://.import/text_fx.png-7b69595f7bd4815874a386f1a55e9141.stex" ]
+source_file="res://UI/Blue-focus.png"
+dest_files=[ "res://.import/Blue-focus.png-f16de49ce1c182146a36a8ff7b20de44.stex" ]
 
 [params]
 

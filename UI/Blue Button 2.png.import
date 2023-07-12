@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/text_fx.png-7b69595f7bd4815874a386f1a55e9141.stex"
+path="res://.import/Blue Button 2.png-e1fb369b94d8855c9dd1b67f1941dbb2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Rocky Roads/UI/text_fx.png"
-dest_files=[ "res://.import/text_fx.png-7b69595f7bd4815874a386f1a55e9141.stex" ]
+source_file="res://UI/Blue Button 2.png"
+dest_files=[ "res://.import/Blue Button 2.png-e1fb369b94d8855c9dd1b67f1941dbb2.stex" ]
 
 [params]
 
