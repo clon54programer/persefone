@@ -22,7 +22,7 @@ var jumping = false
 
 func get_position_vacio():
 	#calcula la posion en el eje y
-	if position.y >= 480:
+	if position.y >= 780:
 		print_debug("esta en el vacio")
 		queue_free()
 		pass
@@ -71,4 +71,20 @@ func _on_Area2D_body_entered(body):
 
 func _on_checpoint_body_entered(body):
 	print_debug("ganaste")
+	pass # Replace with function body.
+
+
+
+
+
+func _Obstuculos_body_entered(body):
+	print_debug("perdiste")
+	pass # Replace with function body.
+
+
+ 
+
+
+func _on_monedas_body_entered(body):
+	print_debug("una moneda")
 	pass # Replace with function body.
