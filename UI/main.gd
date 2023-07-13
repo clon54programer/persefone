@@ -5,16 +5,17 @@ onready var inicio = get_node("MarginContainer/Botones/iniciar")
 onready var salir = get_node("MarginContainer/Botones/Salir")
 
 func _ready():
-	titulo.rect_position.x = 20 
+	pass
+
+func _process(delta):
+	titulo.rect_position.x = 5
+	titulo.rect_position.y = 20
 	
 	inicio.rect_position.x = 60
 	inicio.rect_position.y = 74
 	
-	salir.rect_global_position.x = 60
-	salir.rect_global_position.y = 142
-	#salir.rect_position.x = 60
-	#salir.rect_position.y = 142 
-	
+	salir.rect_position.x = 60
+	salir.rect_position.y = 142 
 	pass
 
 
