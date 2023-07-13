@@ -224,7 +224,6 @@ margin_bottom = -18.3334
 custom_fonts/font = SubResource( 10 )
 text = "Gracias por probar
 este proyecto"
-percent_visible = -0.111111
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 5 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Rocky Roads/Enemies/slime_blue.png" type="Texture" id=1]
 [ext_resource path="res://player/playerDebug.gd" type="Script" id=2]
@@ -34,6 +34,21 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="Animation" id=4]
+resource_name = "quieto_left"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.5, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.5, 5.5 )
 
@@ -48,6 +63,7 @@ vframes = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 anims/Quito = SubResource( 2 )
 anims/RESET = SubResource( 3 )
+anims/quieto_left = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 3.5 )

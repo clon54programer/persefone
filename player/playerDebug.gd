@@ -20,6 +20,7 @@ export (int) var gravity = 1200
 var velocity = Vector2()
 var jumping = false
 
+#esta funcion sirve para cuando el jugador caiga al vacio
 func get_position_vacio():
 	#calcula la posion en el eje y
 	if position.y >= 780:
