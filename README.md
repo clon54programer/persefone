@@ -15,7 +15,7 @@ propuesta real de desarrollo.
 Si, quiere probar este proyecto, ejecute el archivo __.exe__, que tenga la v1.1, ya que esta tiene 
 algunos parches que realize en ese tiempo.
 
-- [juego](/exportacion/Persefonev1.1.exe)
+- [juego](./exportacion/Persefonev1.1.exe)
 
 
 ## Sofware utilizado
