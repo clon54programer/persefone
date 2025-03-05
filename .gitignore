@@ -1,0 +1,28 @@
+
+
+#--------------------------C++--------------------------#
+
+# executable
+*.exe
+
+# object
+*.o 
+*.obj 
+
+# static Library
+*.lib 
+*.a
+
+# dynamic library
+*.so
+*.dll
+
+# binary files
+*.pdb
+*.exp
+
+# Cmake
+build
+
+
+#-------------------------------------------------------#
