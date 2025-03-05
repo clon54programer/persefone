@@ -23,6 +23,8 @@ int main()
 
         BeginDrawing();
 
+        DrawText("Persefone", WIDTH / 2, HEIGHT / 2, 40, MAGENTA);
+
         EndDrawing();
     }
 
