@@ -1,0 +1,19 @@
+env = Environment()
+
+
+name_executable = "Persefone"
+
+src_source = ['src/main.cpp']
+
+
+# external librarys
+conan_info = SConscript('libs/SConscript_conandeps')
+
+flags = info["conandeps"]
+
+flags = info["raylib"]
+
+env.MergeFlags(flags)
+
+
+env.Program(name_executable, source=src_source)
