@@ -1,6 +1,8 @@
 #include <iostream>
 #include <raylib.h>
 
+void InputDebug();
+
 int main()
 {
 
@@ -14,6 +16,7 @@ int main()
     while (!WindowShouldClose())
     {
         // Inicio de la zona Input
+        InputDebug();
 
         // Fin de la zona Input
 
@@ -33,4 +36,12 @@ int main()
     CloseWindow();
 
     return 0;
+}
+
+void InputDebug()
+{
+    if (IsKeyPressed(KEY_SPACE))
+    {
+        std::cout << "[INFO] Presionaste la tecla espaciadora" << '\n';
+    }
 }
