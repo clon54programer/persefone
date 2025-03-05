@@ -17,12 +17,12 @@ para mejorar la jugabilidad, que fue unas de las quejas que recibi al momento de
 - Mejorar la jugabilidad
 - Aumentar mis conocimientos para el desarrollo de videojuegos.
 
-## Ejecutable
+## ~~Ejecutable~~
 
-Si, quiere probar este proyecto, ejecute el archivo __.exe__, que tenga la v1.1, ya que esta tiene 
-algunos parches que realize en ese tiempo.
+~~Si, quiere probar este proyecto, ejecute el archivo __.exe__, que tenga la v1.1, ya que esta tiene 
+algunos parches que realize en ese tiempo.~~
 
-- [juego](./exportacion/Persefonev1.1.exe)
+- ~~[juego](./exportacion/Persefonev1.1.exe)~~ (Version de Godot)
 
 
 ## Sofware utilizado
