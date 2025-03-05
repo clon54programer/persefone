@@ -1,13 +1,15 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-class Scene
+#include "GameObject/GameObject.h" // GameObject
+
+class Scene : public GameObject
 {
 public:
+    Scene() = default;
+    virtual ~Scene() = default;
+
     virtual void Init() = 0;
-    virtual void Draw() = 0;
-    virtual void Update() = 0;
-    virtual void Input() = 0;
 };
 
 #endif
