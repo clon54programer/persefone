@@ -19,6 +19,12 @@ int main()
         40,
     };
 
+    Camera2D camera = {0};
+    camera.target = {player.x + 20.0f, player.y + 20.0f};
+    camera.offset = {WIDTH / 2.0f, HEIGHT / 2.0f};
+    camera.rotation = 0.0f;
+    camera.zoom = 1.0f;
+
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
@@ -39,7 +45,11 @@ int main()
 
         DrawText("Persefone", WIDTH / 3, HEIGHT / 3, 40, MAGENTA);
 
+        BeginMode2D(camera);
+
         DrawRectangle(player.x, player.y, player.width, player.height, BLACK);
+
+        EndMode2D();
 
         EndDrawing();
     }
