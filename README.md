@@ -27,5 +27,6 @@ algunos parches que realize en ese tiempo.~~
 
 ## Sofware utilizado
 
-- Godot Engine
+- Godot Engine (Primera version)
   - __Version__: 3.5.1
+  - __Commit__: ae5d2105f9833caddd5792077740aebc4744b726
