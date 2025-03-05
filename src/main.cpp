@@ -13,6 +13,14 @@ int main()
 
     while (!WindowShouldClose())
     {
+        // Inicio de la zona Input
+
+        // Fin de la zona Input
+
+        // Inicio de la zona Update
+
+        // Fin de la zona Update
+
         BeginDrawing();
 
         EndDrawing();
