@@ -1,14 +1,14 @@
 # Persefone
 
-Fue un proyecto que presente junto ha algunos compañeros para la jornada tecnologica del año 2023 en mi
-antiguo colegio de bachillerato, el liceo parternina.
+Fue un proyecto que presente con unos compañeros para la jornada tecnologica del año 2023 en mi
+antiguo colegio de bachillerato.
 
-El tema central de esa jornada eran los simuladores, en ese tiempo, me estaba adentrado al mundo de
-desarrollo de videojuegos, y aprovechando la oportunidad, pase la propuesta al profesor titural 
-de la jornada para recibir su aprobacion para al proyecto.
+El tema central de esa jornada eran los simuladores. En ese momento, me encontraba adentrado al mundo del
+desarrollo de videojuegos, y teniendo la excusa perfecta para comenzar el proyecto, de inmediato pase la propuesta al profesor titural 
+de la jornada para recibir su aprobacion.
 
-Luego de recibir su aprobacion, comenze el desarrollo de este proyecto, que es mas una demo tecnica que una 
-propuesta real de desarrollo.
+Al recibir la aprobacion, comenze el desarrollo de este proyecto, que es mas una prototipo que
+un videojuego.
 
 ## Ejecutable
 
