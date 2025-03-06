@@ -39,7 +39,7 @@ int main()
         // Inicio de la zona Update
 
         // Camera target follows player
-        camera.target = {player.x + 20, player.y + 20};
+        camera.target = {player.x, player.y};
 
         // Fin de la zona Update
 
@@ -47,11 +47,11 @@ int main()
 
         ClearBackground(WHITE);
 
-        BeginMode2D(camera);
+        // BeginMode2D(camera);
 
         DrawRectangle(player.x, player.y, player.width, player.height, BLACK);
 
-        EndMode2D();
+        // EndMode2D();
 
         DrawText("Persefone", WIDTH / 3, HEIGHT / 3, 40, MAGENTA);
 
