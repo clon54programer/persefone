@@ -16,7 +16,7 @@ private:
     Camera2D camera{0};
 
     Vector2 position{0, 0};
-    float speed_run{0.0f};
+    float speed_run{100.0f};
 
 public:
     Player();
@@ -30,6 +30,7 @@ public:
 
     /// Getters
     Vector2 GetPosition() const { return this->position; }
+    Camera2D GetCamera() const { return this->camera; }
 };
 
 #endif
