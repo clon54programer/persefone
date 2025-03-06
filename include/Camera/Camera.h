@@ -4,17 +4,17 @@
 #include <raylib.h>                // Camera2d
 #include <GameObject/GameObject.h> // GameObject
 
-class Camera : public GameObject
+class CameraInternal : public GameObject
 {
 private:
     Camera2D camera{{0}, {0}, 1.0f, 0};
 
 public:
-    Camera() = default;
-    ~Camera() = default;
+    CameraInternal() = default;
+    ~CameraInternal() = default;
 
     // Constructor
-    Camera(const Vector2 target, const Vector2 offset, const float rotation, float zoom = 1.0f)
+    CameraInternal(const Vector2 target, const Vector2 offset, const float rotation, float zoom = 1.0f)
     {
         this->camera.offset = offset;
         this->camera.target = target;
