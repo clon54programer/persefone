@@ -24,7 +24,8 @@ int main()
     camera.rotation = 0.0f;
     camera.zoom = 1.0f;
     */
-    CameraInternal camera = player.GetCamera();
+    CameraInternal *camera = player.GetWeakRefCamera();
+    camera->SetZoom(2.0f);
 
     Vector2 mouse_position{0, 0};
 
@@ -41,19 +42,17 @@ int main()
 
         mouse_position = GetMousePosition();
 
-        camera = player.GetCamera();
-
         // Fin de la zona Update
 
-        BeginMode2D(camera.GetRaylibCamera());
-
-        EndMode2D();
-
         BeginDrawing();
+
+        BeginMode2D(camera->GetRaylibCamera());
 
         ClearBackground(WHITE);
 
         player.Draw();
+
+        EndMode2D();
 
         DrawText("Persefone", WIDTH / 3, HEIGHT / 3, 40, MAGENTA);
         DrawPostionMouse(mouse_position);
