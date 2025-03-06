@@ -4,7 +4,7 @@ void CameraInternal::DrawDebug(const Rectangle shape) const
 {
     if (this->is_draw == true)
     {
-        DrawRectangleRoundedLinesEx(shape, 0.0f, 0.0f, 1.0f, Fade(MAROON, 0.4f));
+        DrawRectangleRoundedLinesEx(shape, 0.0f, 0.0f, 20.0f, MAROON);
     }
 }
 
