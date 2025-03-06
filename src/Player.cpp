@@ -43,6 +43,20 @@ void Player::Input()
         // TraceLog(LOG_INFO, "Presionaste la tecla right");
     }
 
+    if (IsKeyPressed(KEY_SPACE))
+    {
+        if (this->camera.IsEnable() == false)
+        {
+            this->camera.EnableDraw();
+            TraceLog(LOG_INFO, "Activaste el modo debug");
+        }
+        else
+        {
+            this->camera.DisableDraw();
+            TraceLog(LOG_INFO, "Desactivaste el modo debug");
+        }
+    }
+
     /// End X eje
 }
 
@@ -52,7 +66,7 @@ void Player::Update()
 
     this->camera.SetTarget(this->position);
 
-    this->camera.SetOffset(this->shape.width / 2.0f, this->shape.height / 2.0f);
+    this->camera.SetOffset((float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2);
 
     /// End Camera
 }
@@ -68,4 +82,5 @@ void Player::Draw() const
     draw_shape.y = this->position.y;
 
     DrawRectangleRec(draw_shape, BLACK);
+    this->camera.DrawDebug(draw_shape);
 }
