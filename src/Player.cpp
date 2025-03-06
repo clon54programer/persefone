@@ -64,9 +64,9 @@ void Player::Update()
 {
     /// Begin Camera
 
-    this->camera.SetTarget(this->position);
+    this->camera.SetTarget((float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2);
 
-    this->camera.SetOffset((float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2);
+    this->camera.SetOffset(this->position);
 
     /// End Camera
 }
