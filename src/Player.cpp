@@ -21,12 +21,12 @@ void Player::Input()
     /// Init Y eje
     if (IsKeyDown(KEY_UP))
     {
-        this->position.y += 1;
+        this->position.y -= 1;
     }
 
     if (IsKeyDown(KEY_DOWN))
     {
-        this->position.y -= 1;
+        this->position.y += 1;
     }
 
     /// End Y eje
@@ -34,13 +34,13 @@ void Player::Input()
     /// Init X eje
     if (IsKeyDown(KEY_LEFT))
     {
-        this->position.x += 1;
+        this->position.x -= 1;
     }
 
     if (IsKeyDown(KEY_RIGHT))
     {
-        this->position.x -= 1;
-        TraceLog(LOG_INFO, "Presionaste la tecla right");
+        this->position.x += 1;
+        // TraceLog(LOG_INFO, "Presionaste la tecla right");
     }
 
     /// End X eje
