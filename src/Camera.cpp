@@ -1,5 +1,15 @@
 #include "Camera/Camera.h"
 
+void Camera::Input()
+{
+}
+void Camera::Update()
+{
+}
+void Camera::Draw() const
+{
+}
+
 void Camera::SetZoom(const float value)
 {
     if (value < 1.0f)
