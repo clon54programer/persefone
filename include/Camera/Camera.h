@@ -22,6 +22,7 @@ public:
     }
 
     /// setter
+    /// @warning la valor de zoom no puede ser 0.
     void SetZoom(const float value);
     void Rotation(const float value);
 
