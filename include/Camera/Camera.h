@@ -27,6 +27,8 @@ public:
     void EnableDraw();
     void DisableDraw();
 
+    bool IsEnable() const { return this->is_draw; }
+
     /// setter
     /// @warning la valor de zoom no puede ser 0.
     void
