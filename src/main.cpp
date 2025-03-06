@@ -40,11 +40,11 @@ int main()
 
         ClearBackground(WHITE);
 
-        // BeginMode2D(camera);
+        BeginMode2D(player.GetCamera());
 
         player.Draw();
 
-        // EndMode2D();
+        EndMode2D();
 
         DrawText("Persefone", WIDTH / 3, HEIGHT / 3, 40, MAGENTA);
 
