@@ -3,8 +3,8 @@
 
 Player::Player()
 {
-    this->shape.width = 450 / 2;
-    this->shape.height = 450 / 2;
+    this->shape.width = 40;
+    this->shape.height = 40;
 }
 
 void Player::Input()
@@ -42,5 +42,5 @@ void Player::Update()
 
 void Player::Draw() const
 {
-    DrawRectangle(this->position.x, this->position.y, this->shape.width, this->shape.height, BLANK);
+    DrawRectangle(this->position.x, this->position.y, this->shape.width, this->shape.height, BLUE);
 }
