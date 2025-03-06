@@ -1,12 +1,13 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include <raylib.h> // Camera2d
+#include <raylib.h> // Camera2d, Rectangle
 
 class CameraInternal
 {
 private:
     Camera2D camera{{0}, {0}, 1.0f, 0};
+    bool is_draw{false};
 
 public:
     CameraInternal() = default;
@@ -21,9 +22,15 @@ public:
         this->camera.zoom = zoom;
     }
 
+    void DrawDebug(const Rectangle shape) const;
+
+    void EnableDraw();
+    void DisableDraw();
+
     /// setter
     /// @warning la valor de zoom no puede ser 0.
-    void SetZoom(const float value);
+    void
+    SetZoom(const float value);
     void Rotation(const float value);
 
     void SetTarget(const Vector2 new_target);

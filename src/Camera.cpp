@@ -1,5 +1,23 @@
 #include "Camera/Camera.h"
 
+void CameraInternal::DrawDebug(const Rectangle shape) const
+{
+    if (this->is_draw == true)
+    {
+        DrawRectangleRoundedLinesEx(shape, 0.0f, 0.0f, 1.0f, Fade(MAROON, 0.4f));
+    }
+}
+
+void CameraInternal::EnableDraw()
+{
+    this->is_draw = true;
+}
+
+void CameraInternal::DisableDraw()
+{
+    this->is_draw = false;
+}
+
 void CameraInternal::SetZoom(const float value)
 {
     if (value < 1.0f)
