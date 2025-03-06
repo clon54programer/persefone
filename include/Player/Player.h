@@ -17,6 +17,8 @@ public:
     Player();
     ~Player() = default;
 
+    Player(const float pos_x, const float pos_y);
+
     void Input() override;
     void Update() override;
     void Draw() const override;

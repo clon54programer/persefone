@@ -7,6 +7,15 @@ Player::Player()
     this->shape.height = 40;
 }
 
+Player::Player(const float pos_x, const float pos_y)
+{
+    this->position.x = pos_x;
+    this->position.y = pos_y;
+
+    this->shape.width = 40;
+    this->shape.height = 40;
+}
+
 void Player::Input()
 {
     /// Init Y eje
