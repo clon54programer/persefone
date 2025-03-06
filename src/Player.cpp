@@ -59,5 +59,13 @@ void Player::Update()
 
 void Player::Draw() const
 {
-    DrawRectangle(this->position.x, this->position.y, this->shape.width, this->shape.height, BLUE);
+
+    Rectangle draw_shape = this->shape;
+    draw_shape.height = this->shape.height;
+    draw_shape.width = this->shape.width;
+
+    draw_shape.x = this->position.x;
+    draw_shape.y = this->position.y;
+
+    DrawRectangleRec(draw_shape, BLACK);
 }
