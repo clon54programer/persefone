@@ -33,6 +33,7 @@ public:
     void SetOffset(const float x, const float y);
 
     /// getter
+    Camera2D GetRaylibCamera() const { return this->camera; }
     Vector2 GetTarget() const { return this->camera.target; }
     Vector2 GetOffset() const { return this->camera.offset; }
     float GetRotation() const { return this->camera.rotation; }
