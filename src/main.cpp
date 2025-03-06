@@ -45,15 +45,15 @@ int main()
 
         // Fin de la zona Update
 
+        BeginMode2D(camera.GetRaylibCamera());
+
+        EndMode2D();
+
         BeginDrawing();
 
         ClearBackground(WHITE);
 
-        BeginMode2D(camera.GetRaylibCamera());
-
         player.Draw();
-
-        EndMode2D();
 
         DrawText("Persefone", WIDTH / 3, HEIGHT / 3, 40, MAGENTA);
         DrawPostionMouse(mouse_position);
