@@ -1,16 +1,6 @@
 #include "Camera/Camera.h"
 
-void Camera::Input()
-{
-}
-void Camera::Update()
-{
-}
-void Camera::Draw() const
-{
-}
-
-void Camera::SetZoom(const float value)
+void CameraInternal::SetZoom(const float value)
 {
     if (value < 1.0f)
     {
@@ -21,17 +11,17 @@ void Camera::SetZoom(const float value)
         this->camera.zoom = value;
     }
 }
-void Camera::Rotation(const float value)
+void CameraInternal::Rotation(const float value)
 {
     this->camera.rotation = value;
 }
 
-void Camera::SetTarget(const Vector2 new_target)
+void CameraInternal::SetTarget(const Vector2 new_target)
 {
     this->camera.target = new_target;
 }
 
-void Camera::SetTarget(const float x, const float y)
+void CameraInternal::SetTarget(const float x, const float y)
 {
     Vector2 target = {};
     target.x = x;
@@ -40,12 +30,12 @@ void Camera::SetTarget(const float x, const float y)
     this->SetTarget(target);
 }
 
-void Camera::SetOffset(const Vector2 new_offset)
+void CameraInternal::SetOffset(const Vector2 new_offset)
 {
     this->camera.offset = new_offset;
 }
 
-void Camera::SetOffset(const float x, const float y)
+void CameraInternal::SetOffset(const float x, const float y)
 {
     Vector2 offset = {};
     offset.x = x;
