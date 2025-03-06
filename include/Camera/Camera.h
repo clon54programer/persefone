@@ -1,10 +1,9 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include <raylib.h>                // Camera2d
-#include <GameObject/GameObject.h> // GameObject
+#include <raylib.h> // Camera2d
 
-class CameraInternal : public GameObject
+class CameraInternal
 {
 private:
     Camera2D camera{{0}, {0}, 1.0f, 0};
@@ -21,10 +20,6 @@ public:
         this->camera.rotation = rotation;
         this->camera.zoom = zoom;
     }
-
-    void Input() override;
-    void Update() override;
-    void Draw() const override;
 
     /// setter
     void SetZoom(const float value);
