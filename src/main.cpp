@@ -14,7 +14,7 @@ int main()
 
     InitWindow(WIDTH, HEIGHT, "Persefone");
 
-    Player player;
+    Player player(WIDTH / 2, HEIGHT / 2);
 
     /*Camera2D camera = {0};
     camera.target = Vector2{};
