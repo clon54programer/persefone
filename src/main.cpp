@@ -2,10 +2,12 @@
 #include <raylib.h>
 
 #include "Player/Player.h" // Player
+#include <string>          // to_string
 
 void InputDebug();
 void InputPlayer(Rectangle &player);
 void InputCamara(Camera2D &camara);
+void DrawPostionMouse(Vector2 &position);
 
 int main()
 {
@@ -22,6 +24,9 @@ int main()
     camera.rotation = 0.0f;
     camera.zoom = 1.0f;
     */
+    CameraInternal camera = player.GetCamera();
+
+    Vector2 mouse_position{0, 0};
 
     SetTargetFPS(60);
 
@@ -34,19 +39,24 @@ int main()
         // Inicio de la zona Update
         player.Update();
 
+        mouse_position = GetMousePosition();
+
+        camera = player.GetCamera();
+
         // Fin de la zona Update
 
         BeginDrawing();
 
         ClearBackground(WHITE);
 
-        BeginMode2D(player.GetCamera());
+        BeginMode2D(camera.GetRaylibCamera());
 
         player.Draw();
 
         EndMode2D();
 
         DrawText("Persefone", WIDTH / 3, HEIGHT / 3, 40, MAGENTA);
+        DrawPostionMouse(mouse_position);
 
         EndDrawing();
     }
@@ -103,4 +113,19 @@ void InputCamara(Camera2D &camara)
     {
         camara.zoom -= 1;
     }
+}
+
+void DrawPostionMouse(Vector2 &position)
+{
+    std::string pos_x = "X: ";
+    std::string pos_y = "Y: ";
+
+    pos_x += std::to_string(position.x);
+    pos_y += std::to_string(position.y);
+
+    DrawText(pos_x.c_str(), 80, 31, 24, BLACK);
+    DrawText(pos_y.c_str(), 80, 68, 24, BLACK);
+
+    // TraceLog(LOG_INFO, "%s", pos_x.c_str());
+    // TraceLog(LOG_INFO, "%s", pos_y.c_str());
 }
