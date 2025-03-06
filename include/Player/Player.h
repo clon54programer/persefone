@@ -7,14 +7,14 @@
 class Player : public GameObject
 {
 private:
-    Rectangle shape{};
-    Camera2D camera{};
+    Rectangle shape{0};
+    Camera2D camera{0};
 
     Vector2 position{0, 0};
     float speed_run{0.0f};
 
 public:
-    Player() = default;
+    Player();
     ~Player() = default;
 
     void Input() override;

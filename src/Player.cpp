@@ -1,4 +1,11 @@
 #include "Player/Player.h"
+#include <raylib.h>
+
+Player::Player()
+{
+    this->shape.width = 450 / 2;
+    this->shape.height = 450 / 2;
+}
 
 void Player::Input()
 {
@@ -35,4 +42,5 @@ void Player::Update()
 
 void Player::Draw() const
 {
+    DrawRectangle(this->position.x, this->position.y, this->shape.width, this->shape.height, BLANK);
 }
