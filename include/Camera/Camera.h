@@ -27,6 +27,14 @@ public:
     void Draw() const override;
 
     /// setter
+    void SetZoom(const float value);
+    void Rotation(const float value);
+
+    void SetTarget(const Vector2 new_target);
+    void SetTarget(const float x, const float y);
+
+    void SetOffset(const Vector2 new_offset);
+    void SetOffset(const float x, const float y);
 
     /// getter
     Vector2 GetTarget() const { return this->camera.target; }
