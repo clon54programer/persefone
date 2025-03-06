@@ -1,6 +1,8 @@
 #include <iostream>
 #include <raylib.h>
 
+#include "Player/Player.h" // Player
+
 void InputDebug();
 void InputPlayer(Rectangle &player);
 void InputCamara(Camera2D &camara);
@@ -12,34 +14,25 @@ int main()
 
     InitWindow(WIDTH, HEIGHT, "Persefone");
 
-    Rectangle player = {
-        WIDTH / 4,
-        WIDTH / 4,
-        40,
-        40,
-    };
+    Player player;
 
-    Camera2D camera = {0};
+    /*Camera2D camera = {0};
     camera.target = Vector2{};
     camera.offset = {WIDTH / 2.0f, HEIGHT / 2.0f};
     camera.rotation = 0.0f;
     camera.zoom = 1.0f;
+    */
 
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
     {
         // Inicio de la zona Input
-        InputDebug();
-        InputPlayer(player);
-        InputCamara(camera);
-
+        player.Input();
         // Fin de la zona Input
 
         // Inicio de la zona Update
-
-        // Camera target follows player
-        camera.target = {player.x, player.y};
+        player.Update();
 
         // Fin de la zona Update
 
@@ -49,7 +42,7 @@ int main()
 
         // BeginMode2D(camera);
 
-        DrawRectangle(player.x, player.y, player.width, player.height, BLACK);
+        player.Draw();
 
         // EndMode2D();
 
