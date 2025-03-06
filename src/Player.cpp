@@ -1,6 +1,5 @@
 #include "Player/Player.h"
 #include <raylib.h>
-#include <iostream> // std::cout
 
 Camera2D Internal::InitCamera()
 {
@@ -36,12 +35,12 @@ Player::Player(const float pos_x, const float pos_y)
 void Player::Input()
 {
     /// Init Y eje
-    if (IsKeyUp(KEY_UP))
+    if (IsKeyDown(KEY_UP))
     {
         this->position.y += 1;
     }
 
-    if (IsKeyUp(KEY_DOWN))
+    if (IsKeyDown(KEY_DOWN))
     {
         this->position.y -= 1;
     }
@@ -49,14 +48,15 @@ void Player::Input()
     /// End Y eje
 
     /// Init X eje
-    if (IsKeyUp(KEY_LEFT))
+    if (IsKeyDown(KEY_LEFT))
     {
         this->position.x += 1;
     }
 
-    if (IsKeyUp(KEY_RIGHT))
+    if (IsKeyDown(KEY_RIGHT))
     {
         this->position.x -= 1;
+        TraceLog(LOG_INFO, "Presionaste la tecla right");
     }
 
     /// End X eje
