@@ -27,6 +27,7 @@ public:
     /// Getters
     Vector2 GetPosition() const { return this->position; }
     CameraInternal GetCamera() const { return this->camera; }
+    CameraInternal *GetWeakRefCamera() { return &this->camera; }
 };
 
 #endif
