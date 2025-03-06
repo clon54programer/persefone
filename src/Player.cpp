@@ -1,6 +1,18 @@
 #include "Player/Player.h"
 #include <raylib.h>
 
+Camera2D Player::Internal::InitCamera()
+{
+    Camera2D camera = {0};
+
+    camera.rotation = 0.0f;
+    camera.zoom = 1.0f;
+    camera.offset = {0, 0};
+    camera.target = {0, 0};
+
+    return camera;
+}
+
 Player::Player()
 {
     this->shape.width = 40;
@@ -47,6 +59,14 @@ void Player::Input()
 
 void Player::Update()
 {
+    /// Begin Camera
+
+    this->camera.target = this->position;
+
+    this->camera.offset.x = this->shape.width;
+    this->camera.offset.y = this->shape.height;
+
+    /// End Camera
 }
 
 void Player::Draw() const

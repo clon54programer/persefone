@@ -13,6 +13,11 @@ private:
     Vector2 position{0, 0};
     float speed_run{0.0f};
 
+    struct Internal
+    {
+        Camera2D InitCamera();
+    };
+
 public:
     Player();
     ~Player() = default;
