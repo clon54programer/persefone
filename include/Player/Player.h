@@ -3,17 +3,13 @@
 
 #include "GameObject/GameObject.h" // GameObject
 #include <raylib.h>
-
-namespace Internal
-{
-    Camera2D InitCamera();
-};
+#include <Camera/Camera.h> // Camera
 
 class Player : public GameObject
 {
 private:
     Rectangle shape{0};
-    Camera2D camera{0};
+    CameraInternal camera{};
 
     Vector2 position{0, 0};
     float speed_run{100.0f};
@@ -30,7 +26,7 @@ public:
 
     /// Getters
     Vector2 GetPosition() const { return this->position; }
-    Camera2D GetCamera() const { return this->camera; }
+    CameraInternal GetCamera() const { return this->camera; }
 };
 
 #endif
