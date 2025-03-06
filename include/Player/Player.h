@@ -10,6 +10,7 @@ private:
     Rectangle shape{};
     Camera2D camera{};
 
+    Vector2 position{0, 0};
     float speed_run{0.0f};
 
 public:
