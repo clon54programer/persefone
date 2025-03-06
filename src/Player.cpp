@@ -1,7 +1,7 @@
 #include "Player/Player.h"
 #include <raylib.h>
 
-Camera2D Player::Internal::InitCamera()
+Camera2D Internal::InitCamera()
 {
     Camera2D camera = {0};
 
@@ -17,6 +17,8 @@ Player::Player()
 {
     this->shape.width = 40;
     this->shape.height = 40;
+
+    this->camera = Internal::InitCamera();
 }
 
 Player::Player(const float pos_x, const float pos_y)
@@ -26,6 +28,8 @@ Player::Player(const float pos_x, const float pos_y)
 
     this->shape.width = 40;
     this->shape.height = 40;
+
+    this->camera = Internal::InitCamera();
 }
 
 void Player::Input()
